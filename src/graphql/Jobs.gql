@@ -1,0 +1,8 @@
+{
+    jobs  {
+        id
+        title
+        url
+        salary
+    }
+}

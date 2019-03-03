@@ -3,15 +3,15 @@
     <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/jobs">Jobs</router-link>|
-      <router-link to="/recommended-companies">Recommended Companies</router-link>|
-      <router-link to="/chat">Chat Room</router-link>|
+      <router-link to="/recommended-companies"
+        >Recommended Companies</router-link
+      >| <router-link to="/chat">Chat Room</router-link>|
       <router-link to="/faq">FAQ</router-link> |
       <router-link to="/contact">Contact</router-link>
     </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
-
 
 <!-- general style for whole pages! -->
 <style>
