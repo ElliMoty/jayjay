@@ -2,7 +2,12 @@
     jobs  {
         id
         title
-        url
         salary
+        jobType
+        company {
+            name
+            location
+            area
+        }
     }
 }

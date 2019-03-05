@@ -1,12 +1,13 @@
 <template>
   <div class="intro">
     <h1>{{ msg }}</h1>
+
     <h3 class="quote">
       The future belongs to those who believe in the beauty of their dreams.
       <br />
       <span id="author">-Roosevelt</span>
     </h3>
-
+     <!-- App Guidance -->
     <h4>
       We are here to make our dreams come true by helping each other. <br />This
       app tries to help you to find your first job with more confidence and
@@ -27,6 +28,7 @@
       <br />
       <a>Contact</a> with us.
     </h4>
+
   </div>
 </template>
 
@@ -52,14 +54,6 @@ p {
 .quote {
   color: #a3a3a3;
 }
-/* ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-} */
 a {
   color: #002898;
 }

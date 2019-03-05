@@ -1,0 +1,3 @@
+mutation newJob($newJobData: AddJobInput) {
+    addJob(input: $newJobData)
+}

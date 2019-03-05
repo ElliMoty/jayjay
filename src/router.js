@@ -21,6 +21,16 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/Jobs.vue")
+    },
+    {
+      path: "/jobs/:id",
+      name: "job-info",
+      component: () => import("./views/JobInfo.vue")
+    },
+    {
+      path: "/add-job",
+      name: "add-job",
+      component: () => import("./views/AddJob.vue")
     }
   ]
 });

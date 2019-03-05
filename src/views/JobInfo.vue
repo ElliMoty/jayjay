@@ -1,5 +1,5 @@
 <template>
-  <div class="jobs-graphql">
+  <div class="job-graphql">
     <!-- Apollo watched Graphql query -->
     <ApolloQuery :query="require('../graphql/Jobs.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
@@ -12,18 +12,11 @@
         <!-- Result -->
         <div v-else-if="data" class="result apollo">
           <div v-for="job in data.jobs" v-bind:key="job.id">
-            <ul>
-              <li>
-                <a class="job-title" v-bind:href="'/jobs/' + job.id">
-                  <h2>{{ job.title }}</h2>
-                </a>
-                {{ job.company.name}}
-                <br>
-                {{ job.company.location }} > <span class="gray">{{ job.company.area }}</span> 
-                <br>
-                {{ job.salary }}
-              </li>
-            </ul>
+              <div v-if="job.id === $route.params.id">
+                  <h1>{{job.title}}</h1>
+                  <p>{{job.jobType}}</p>
+
+              </div>
           </div>
         </div>
 
@@ -35,14 +28,4 @@
 </template>
 
 <style scoped>
-  ul {
-    list-style-type: none;
-  }
-  .job-title {
-    cursor: pointer;
-  }
-  .gray {
-    color: gray;
-    font:
-  }
 </style>

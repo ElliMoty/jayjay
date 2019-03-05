@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/jobs">Jobs</router-link>|
-      <router-link to="/recommended-companies"
-        >Recommended Companies</router-link
-      >| <router-link to="/chat">Chat Room</router-link>|
+      <router-link to="/">Home</router-link> |
+      <router-link to="/jobs">Jobs</router-link> |
+      <router-link to="add-job"
+        >Add Job</router-link
+      >| <router-link to="/Resource">Resource</router-link> |
       <router-link to="/faq">FAQ</router-link> |
       <router-link to="/contact">Contact</router-link>
     </div>
