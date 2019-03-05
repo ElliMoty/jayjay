@@ -1,17 +1,45 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/jobs">Jobs</router-link> |
-      <router-link to="add-job"
-        >Add Job</router-link
-      >| <router-link to="/Resource">Resource</router-link> |
-      <router-link to="/faq">FAQ</router-link> |
-      <router-link to="/contact">Contact</router-link>
+    <div id="nav" v-if="authenticated">
+      <router-link to="/login" v-on:click.native="logout()" replace>Logout</router-link> |
+      <router-link to="/jayjay">Home</router-link> |
+      <router-link to="/jayjay/jobs">Jobs</router-link> |
+      <router-link to="/jayjay/add-job">Add Job</router-link> |
+      <router-link to="/jayjay/Resource">Resource</router-link> |
+      <router-link to="/jayjay/faq">FAQ</router-link> |
+      <router-link to="/jayjaycontact">Contact</router-link>
     </div>
-    <router-view />
+    <router-view @authenticated="setAuthenticated"/>
   </div>
 </template>
+
+<script>
+export default {
+  name: "App",
+  data() {
+    return {
+      authenticated: false,
+      mockAccount: {
+        username: "elli",
+        password: "chicken"
+      }
+    };
+  },
+  mounted() {
+    if (!this.authenticated) {
+      this.$router.replace({ name: "login" });
+    }
+  },
+  methods: {
+    setAuthenticated(status) {
+      this.authenticated = status;
+    },
+    logout() {
+      this.authenticated = false;
+    }
+  }
+};
+</script>
 
 <!-- general style for whole pages! -->
 <style>
@@ -21,6 +49,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  width: 1024px;
+  margin: auto;
 }
 #nav {
   padding: 30px;
@@ -33,5 +63,10 @@
 
 #nav a.router-link-exact-active {
   color: #7287be;
+}
+
+h1 {
+  padding: 0;
+  margin-top: 0;
 }
 </style>

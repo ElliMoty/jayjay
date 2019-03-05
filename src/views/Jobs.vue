@@ -14,7 +14,7 @@
           <div v-for="job in data.jobs" v-bind:key="job.id">
             <ul>
               <li>
-                <a class="job-title" v-bind:href="'/jobs/' + job.id">
+                <a class="job-title" v-bind:href="'/jayjay/jobs/' + job.id">
                   <h2>{{ job.title }}</h2>
                 </a>
                 {{ job.company.name}}

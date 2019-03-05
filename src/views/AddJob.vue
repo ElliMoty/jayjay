@@ -1,9 +1,9 @@
 <template>
-  <div class="form">
+  <div class="add-job">
     <ApolloMutation :mutation="require('../graphql/AddJob.gql')" 
     :variables="{ newJobData: { title, coName, salary } }">
       <template slot-scope="{ mutate, loading, error }">
-        <div class="add-job">
+        <div>
           <form action>
             <label for>Job Title</label>
             <input type="text" v-model="title" placeholder="Job Title">

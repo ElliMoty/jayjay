@@ -1,6 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
+import LoginComponent from "./views/Login.vue";
+import JobComponent from "./views/Jobs.vue";
+import JobInfoComponent from "./views/JobInfo.vue";
+import AddJobComponent from "./views/AddJob.vue";
 
 Vue.use(Router);
 
@@ -10,27 +14,34 @@ export default new Router({
   routes: [
     {
       path: "/",
+      redirect: {
+        name: "login"
+      }
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: LoginComponent
+    },
+    {
+      path: "/jayjay",
       name: "home",
       component: Home
     },
     {
-      path: "/jobs",
+      path: "/jayjay/jobs",
       name: "jobs",
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () =>
-        import(/* webpackChunkName: "about" */ "./views/Jobs.vue")
+      component: JobComponent
     },
     {
-      path: "/jobs/:id",
+      path: "/jayjay/jobs/:id",
       name: "job-info",
-      component: () => import("./views/JobInfo.vue")
+      component: JobInfoComponent
     },
     {
       path: "/add-job",
       name: "add-job",
-      component: () => import("./views/AddJob.vue")
+      component: AddJobComponent
     }
   ]
 });

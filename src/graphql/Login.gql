@@ -1,0 +1,3 @@
+mutation logIn($newUser: AddNewUser) {
+    addUser(login: $newUser)
+}
