@@ -4,6 +4,7 @@ import router from "./router";
 import store from "./store";
 import { createProvider } from "./vue-apollo";
 
+
 Vue.config.productionTip = false;
 
 new Vue({
