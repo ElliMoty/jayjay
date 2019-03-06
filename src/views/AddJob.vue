@@ -1,6 +1,7 @@
 <template>
   <div class="add-job">
     <ApolloMutation :mutation="require('../graphql/AddJob.gql')" 
+    :refetchQueries="true"
     :variables="{ newJobData: { title, coName, salary } }">
       <template slot-scope="{ mutate, loading, error }">
         <div>

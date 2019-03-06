@@ -39,7 +39,7 @@ export default new Router({
       component: JobInfoComponent
     },
     {
-      path: "/add-job",
+      path: "/jayjay/add-job",
       name: "add-job",
       component: AddJobComponent
     }

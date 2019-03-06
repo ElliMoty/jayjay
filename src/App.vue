@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <div id="nav" v-if="authenticated">
-      <router-link to="/login" v-on:click.native="logout()" replace>Logout</router-link> |
       <router-link to="/jayjay">Home</router-link> |
       <router-link to="/jayjay/jobs">Jobs</router-link> |
       <router-link to="/jayjay/add-job">Add Job</router-link> |
       <router-link to="/jayjay/Resource">Resource</router-link> |
       <router-link to="/jayjay/faq">FAQ</router-link> |
-      <router-link to="/jayjaycontact">Contact</router-link>
+      <router-link to="/jayjaycontact">Contact</router-link> |
+      <router-link to="/login" v-on:click.native="logout()" replace>Logout</router-link>
+
     </div>
     <router-view @authenticated="setAuthenticated"/>
   </div>
@@ -26,15 +27,19 @@ export default {
     };
   },
   mounted() {
-    if (!this.authenticated) {
+    if (!localStorage.authenticated) {
       this.$router.replace({ name: "login" });
+    } else {
+      this.authenticated = true;
     }
   },
   methods: {
     setAuthenticated(status) {
+      localStorage.authenticated = status;
       this.authenticated = status;
     },
     logout() {
+      localStorage.authenticated = false;
       this.authenticated = false;
     }
   }

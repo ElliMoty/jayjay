@@ -14,9 +14,9 @@
           <div v-for="job in data.jobs" v-bind:key="job.id">
             <ul>
               <li>
-                <a class="job-title" v-bind:href="'/jayjay/jobs/' + job.id">
+                <router-link class="job-title" v-bind:to="'/jayjay/jobs/' + job.id">
                   <h2>{{ job.title }}</h2>
-                </a>
+                </router-link>
                 {{ job.company.name}}
                 <br>
                 {{ job.company.location }} > <span class="gray">{{ job.company.area }}</span> 
@@ -33,6 +33,17 @@
     </ApolloQuery>
   </div>
 </template>
+
+<script>
+export default {
+  name: "jobs-graphql",
+  data() {
+    return {
+      authenticated: true,
+    }
+  }
+}
+</script>
 
 <style scoped>
   ul {
