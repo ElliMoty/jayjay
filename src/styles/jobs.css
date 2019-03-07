@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+body, button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  line-height: 1.4;
+}
+@media (min-width: 450px) {
+  body, button {
+    font-size: 1.125em;
+  }
+}
+h2 {
+  margin-bottom: 0.1875em;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+@media (min-width: 450px) {
+  h2 {
+    font-size: 2.25em;
+  }
+}
+a {
+  color: #3cf;
+  text-decoration: none;
+}
+a:not(.btn):hover {
+  color: #3cf;
+  
+}
+.btn {
+  padding: 0.75em 2.25em;
+  margin-top: 50px;
+  color: white;
+  background-color: #f897a9;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn:focus {
+  outline-color: #fcbec9;
+}
+.btn:hover {
+  background-color: rgb(169, 171, 172);
+}
+.btn-sm {
+  padding: 0.375em 1.125em;
+  font-size: 0.75em;
+  letter-spacing: 0.01875em;
+}
+.container {
+  overflow: hidden;
+  margin: 2em auto 0;
+  padding: 1.5em;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  background: rgb(224, 224, 224);
+  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  box-shadow: 5px 5px 20px lightgray;
+}
+.container p:not(:last-child) {
+  margin-bottom: 0.9375em;
+}
+.loader {
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  border: 6px solid transparent;
+  border-top-color: #fcbec9;
+  border-right-color: #fcbec9;
+  border-bottom-color: #fcbec9;
+  border-radius: 100%;
+  animation: spin 0.4s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#search-jobs {
+  font-size: 18px;
+  padding: 10px 15px;
+}
+

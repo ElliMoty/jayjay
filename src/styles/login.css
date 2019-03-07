@@ -239,5 +239,9 @@ form button:hover, form button:visited {
             transform: translateY(-1200px) rotate(600deg);
   }
 }
+
+.no-result {
+  padding: 40px;
+}
 /***** bubble square css end *****/
 /***** Login page css end *****/

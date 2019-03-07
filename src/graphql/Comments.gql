@@ -1,0 +1,7 @@
+query GetAllComments {
+    comments {
+        text
+        username
+        date
+    }
+}

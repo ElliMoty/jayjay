@@ -1,15 +1,16 @@
-<template>
+<template id="homePage">
   <div id="app">
     <div id="nav" v-if="authenticated">
       <router-link to="/jayjay">Home</router-link> |
       <router-link to="/jayjay/jobs">Jobs</router-link> |
       <router-link to="/jayjay/add-job">Add Job</router-link> |
-      <router-link to="/jayjay/Resource">Resource</router-link> |
+      <router-link to="/jayjay/Comments">Comments</router-link> |
       <router-link to="/jayjay/faq">FAQ</router-link> |
-      <router-link to="/jayjaycontact">Contact</router-link> |
+      <router-link to="/jayjay/contact">Contact</router-link> |
       <router-link to="/login" v-on:click.native="logout()" replace>Logout</router-link>
-
+      <img src="./assets/logo-nav.png" alt="JayJay logo" id="logo"/>
     </div>
+
     <router-view @authenticated="setAuthenticated"/>
   </div>
 </template>
@@ -27,6 +28,7 @@ export default {
     };
   },
   mounted() {
+    // There is a bug here!
     if (!localStorage.authenticated) {
       this.$router.replace({ name: "login" });
     } else {
@@ -54,24 +56,34 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  width: 1024px;
+  width: 100%;
   margin: auto;
+  font-size: 17px;
 }
 #nav {
   padding: 30px;
+  background: #514F4F;
+  padding-right: 10px;
+  margin-bottom: 100px;
+ 
 }
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
+  font-size: 16px;
 }
 
 #nav a.router-link-exact-active {
-  color: #7287be;
+  color: #FCBEC9;
 }
 
 h1 {
   padding: 0;
   margin-top: 0;
+}
+
+#logo {
+  margin-left: 750px;
 }
 </style>

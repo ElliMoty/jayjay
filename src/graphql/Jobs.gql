@@ -1,13 +1,10 @@
-{
+query GetAllJobs {
     jobs  {
         id
         title
-        salary
-        jobType
+        url
         company {
             name
-            location
-            area
         }
     }
 }

@@ -3,6 +3,9 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import { createProvider } from "./vue-apollo";
+import jQuery from "jquery";
+global.jQuery = jQuery;
+global.$ = jQuery;
 
 
 Vue.config.productionTip = false;

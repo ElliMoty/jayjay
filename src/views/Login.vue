@@ -80,6 +80,6 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-@import "../styles/login.css";
+<style scoped>
+  @import "../styles/login.css";
 </style>
