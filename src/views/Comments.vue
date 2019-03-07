@@ -1,5 +1,5 @@
 <template>
-  <div class="comments">
+  <div class="comment-page">
     <ApolloQuery :query="require('../graphql/Comments.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
         <section class="comments">
@@ -18,7 +18,7 @@
                 </div>
                 <p class="attribution">
                   by
-                  <a href="#non">{{comment.username}}</a>
+                  <a class="username-link" href="#non">{{comment.username}}</a>
                   at {{comment.date}}
                 </p>
               </div>
@@ -39,9 +39,9 @@
       <template slot-scope="{ mutate, loading, error }">
         <div>
           <form action>
-            <textarea class="comment-text" type="text" v-model="text" placeholder="Comment"></textarea>
+            <textarea class="comment-text" type="text" v-model="text"></textarea>
             
-            <input type="text" v-model="username" placeholder="Your Name">
+            <input class="name-input" type="text" v-model="username" placeholder="Your Name:">
           </form>
         </div>
 
@@ -54,7 +54,7 @@
 
 <script>
 export default {
-  name: "comments",
+  name: "comment-page",
   data() {
     return {
       text: "",
@@ -101,7 +101,7 @@ section {
   margin: auto;
   margin-top: -35px;
   border-radius: 5px;
-  border: 1px solid #666;
+  box-shadow: 5px 5px 20px gray;
 }
 
 .comment {
@@ -161,8 +161,8 @@ section {
 }
 
 .comment:before {
-  width: 9px;
-  height: 9px;
+  width: 15px;
+  height: 15px;
   border: 3px solid #fff;
   border-radius: 100px;
   margin: 16px 0 0 -6px;
@@ -197,5 +197,44 @@ section {
 .comment-text {
   width: 60%;
   height: 100px;
+}
+
+.username-link {
+  color: #f3758c;
+}
+
+.username-link:hover {
+  color: #fa385b;
+  text-decoration: none;
+}
+
+.name-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgb(199, 199, 199);
+  width: 60%;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+
+.name-input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(65, 65, 65, 0.4);
+}
+.name-input:focus {
+  background-color: white;
+  width: 300px;
+  color: #f3758c;
 }
 </style>

@@ -3,7 +3,7 @@
     <ApolloMutation
       :mutation="require('../graphql/AddJob.gql')"
       :refetchQueries="['GetAllJobs']"
-      :variables="{ newJobData: { title, coName, salary } }"
+      :variables="{ newJobData: { title, coName, url } }"
     >
       <template slot-scope="{ mutate, loading, error }">
         <div>
@@ -20,12 +20,14 @@
 
             <div>
               <label for>URL</label>
-              <input class="job-input" type="text" v-model="salary" placeholder="URL">
+              <input class="job-input" type="text" v-model="url" placeholder="URL">
             </div>
           </form>
         </div>
 
-        <button :disabled="loading" @click="mutate()" class="addJob">Add Job</button>
+        <button :disabled="loading" @click="mutate()" class="addJob">
+          <router-link to="/jayjay/jobs" class="add-job-click">Add Job</router-link>
+        </button>
         <p v-if="error">An error occured: {{ error }}</p>
       </template>
     </ApolloMutation>
@@ -38,7 +40,7 @@ export default {
   data() {
     return {
       title: "",
-      salary: "",
+      url: "",
       coName: ""
     };
   }
@@ -92,6 +94,14 @@ export default {
 }
 .job-input:hover {
   background-color: rgb(228, 229, 230);
+}
+.add-job-click {
+  color: gray;
+}
+.add-job-click:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
 }
 </style>
 

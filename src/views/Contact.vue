@@ -58,7 +58,7 @@
             <li class="list-item">
               <i class="fa fa-phone fa-2x">
                 <span class="contact-text phone">
-                  <a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a>
+                  <a href="tel:1-212-555-5555" title="Give me a call">(041) 4652-404</a>
                 </span>
               </i>
             </li>
@@ -75,12 +75,12 @@
           <hr>
           <ul class="social-media-list">
             <li>
-              <a href="#" target="_blank" class="contact-icon">
+              <a href="https://github.com/ElliMoty" target="_blank" class="contact-icon">
                 <i class="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" class="contact-icon">
+              <a href="https://twitter.com/ElliMotaghi" target="_blank" class="contact-icon">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
             </li>
@@ -90,8 +90,8 @@
               </a>
             </li>
             <li>
-              <a href="#" target="_blank" class="contact-icon">
-                <i class="fa fa-codepen" aria-hidden="true"></i>
+              <a href="https://www.linkedin.com/in/elli-motaghi/" target="_blank" class="contact-icon">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
             </li>
           </ul>
@@ -123,10 +123,9 @@ export default {
 .section-header {
   text-align: center;
   margin: 0 auto;
-  /* margin-bottom: 50px; */
-  font: 300 60px "Oswald", sans-serif;
+  font: 100 50px "Oswald", sans-serif;
   letter-spacing: 6px;
-  color: #514F4F;
+  color: #fcbec9;
   padding-bottom: 25px;
 }
 
@@ -148,9 +147,10 @@ export default {
 .form-control,
 textarea {
   max-width: 400px;
-  background-color: #111;
-  color: #fff;
+  background-color: rgba(112, 112, 112, 0.6);
+  color: rgb(255, 255, 255);
   letter-spacing: 1px;
+  font-size: 16px;
 }
 
 .send-button {
@@ -165,6 +165,11 @@ textarea {
   width: 400px;
   height: 34px;
   transition: all 0.2s ease-in-out;
+}
+
+#submit {
+  background: #f5a1b1;
+  border: 1px solid #f5a1b1;
 }
 
 .send-text {
@@ -194,14 +199,14 @@ textarea {
 
 .list-item {
   line-height: 4;
-  color: #aaa;
+  color: rgb(143, 142, 142);
   text-align: left;
 }
 
 .contact-text {
   font: 300 18px "Lato", sans-serif;
   letter-spacing: 1.9px;
-  color: #bbb;
+  color: rgb(126, 124, 124);
 }
 
 .place {
@@ -217,13 +222,13 @@ textarea {
 }
 
 .contact-text a {
-  color: #bbb;
+  color: rgb(126, 124, 124);
   text-decoration: none;
   transition-duration: 0.2s;
 }
 
 .contact-text a:hover {
-  color: #fff;
+  color: rgb(199, 197, 197);
   text-decoration: none;
 }
 
@@ -236,7 +241,7 @@ textarea {
 }
 
 .social-media-list li a {
-  color: #fff;
+  color: rgb(255, 254, 254);
 }
 
 .social-media-list li {
@@ -249,14 +254,13 @@ textarea {
   margin: 10px auto;
   line-height: 70px;
   border-radius: 50%;
-  color: #fff;
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(109, 107, 107);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  margin: 0 2px;
 }
 
-.social-media-list li:after {
-  content: "";
+ .social-media-list li:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -265,23 +269,23 @@ textarea {
   line-height: 70px;
   border-radius: 50%;
   opacity: 0;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px #f5a1b1;
   transition: all 0.2s ease-in-out;
-}
+} 
 
-.social-media-list li:hover {
-  background-color: #fff;
-}
+ .social-media-list li:hover {
+  background-color:#f5a1b1;
+}  
 
-.social-media-list li:hover:after {
+ .social-media-list li:hover:after {
   opacity: 1;
   transform: scale(1.12);
   transition-timing-function: cubic-bezier(0.37, 0.74, 0.15, 1.65);
 }
 
-.social-media-list li:hover a {
-  color: #111;
-}
+ .social-media-list li:hover a {
+  color: rgb(105, 104, 104);
+} 
 
 .copyright {
   font: 200 14px "Oswald", sans-serif;
@@ -329,6 +333,7 @@ hr {
   }
   .section-header {
     font-size: 50px;
+    color: #f88a9e;
   }
   .direct-contact-container,
   .form-wrapper {

@@ -15,20 +15,23 @@
 
           <!-- Result -->
           <div v-else-if="data" class="result apollo">
-            <div class="container" id="job">
+            <div class="container" id="job-loading">
               <p>Click the button above to get started</p>
+            </div>
 
-              <div class="hidden" id="job-result" v-for="job in data.jobs" v-bind:key="job.id">
+            <div class="container" style="display:none" id="job-results">
+              <div id="job-result" v-for="job in data.jobs" v-bind:key="job.id">
                 <h2>
-                  <a href="#" target="_blank">{{job.title}}</a>
+                  <a v-bind:href="job.url" target="_blank">{{job.title}}</a>
                 </h2>
                 <p>at {{job.company.name}}</p>
                 <p>
-                  <a href="#" target="_blank" class="btn btn-sm">Learn More</a>
+                  <a v-bind:href="job.url" target="_blank" class="btn btn-sm">Learn More</a>
                 </p>
+                <hr class="divider">
               </div>
+              
             </div>
-
           </div>
 
           <!-- No result -->
@@ -45,15 +48,12 @@ export default {
   mounted() {
     this.$nextTick(() => {
       $("#search-jobs").on("click", () => {
-        $("#job").html('<div class="loader"/>');
+        $("#job-loading").html('<div class="loader"/>');
 
         setTimeout(() => {
-          $("#job").html('');
+          $("#job-loading").css("display", "none");
+          $("#job-results").css("display", "block");
         }, 1000);
-
-        $(".hidden").css("display", "block");
-
-
       });
     });
   }

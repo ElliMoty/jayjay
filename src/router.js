@@ -49,7 +49,7 @@ export default new Router({
     },
     {
       path: "/jayjay/comments",
-      name: "comments",
+      name: "comment-page",
       component: CommentsComponent
     }, 
     {

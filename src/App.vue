@@ -64,7 +64,7 @@ export default {
   padding: 30px;
   background: #514F4F;
   padding-right: 10px;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
  
 }
 
