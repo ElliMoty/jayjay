@@ -45,7 +45,7 @@
           </form>
         </div>
 
-        <button :disabled="loading" @click="mutate()">Add</button>
+        <button class="add-button" :disabled="loading" @click="mutate()">Add</button>
         <p v-if="error">An error occured: {{ error }}</p>
       </template>
     </ApolloMutation>
@@ -236,5 +236,11 @@ section {
   background-color: white;
   width: 300px;
   color: #f3758c;
+}
+.add-button {
+  width: 30%;
+  height: 35px;
+  background: #f3758c;
+  border-radius: 10px;
 }
 </style>
