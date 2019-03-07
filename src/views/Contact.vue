@@ -51,7 +51,7 @@
           <ul class="contact-list">
             <li class="list-item">
               <i class="fa fa-map-marker fa-2x">
-                <span class="contact-text place">SEATTLE | WA</span>
+                <span class="contact-text place">Sydney | NSW</span>
               </i>
             </li>
 
@@ -66,7 +66,7 @@
             <li class="list-item">
               <i class="fa fa-envelope fa-2x">
                 <span class="contact-text gmail">
-                  <a href="mailto:#" title="Send me an email">venkman@gmail.com</a>
+                  <a href="mailto:#" title="Send me an email">elli-motaghi@gmail.com</a>
                 </span>
               </i>
             </li>
@@ -195,6 +195,7 @@ textarea {
 .list-item {
   line-height: 4;
   color: #aaa;
+  text-align: left;
 }
 
 .contact-text {
