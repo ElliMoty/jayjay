@@ -7,15 +7,15 @@
       <div>
         <input type="checkbox" id="question1" name="q" class="questions">
         <div class="plus">+</div>
-        <label for="question1" class="question">This is the question that will be asked?</label>
-        <div class="answers">This is the answer of the question.. keep it short.</div>
+        <label for="question1" class="question">Who is a 'Junior Developer'?</label>
+        <div class="answers">We define a Junior Developer as someone who has beginner development skills, and is new (or brand-new) to actually working as a professional developer. Since the spectrum is pretty large, we encourage employers to be specific about their requirements and expectations of potential hires.</div>
       </div>
 
       <div>
         <input type="checkbox" id="question2" name="q" class="questions">
         <div class="plus">+</div>
-        <label for="question2" class="question">Short?</label>
-        <div class="answers">short!</div>
+        <label for="question2" class="question">How long after graduation you can find a job?</label>
+        <div class="answers">It completely depends on different things. From your skills to your luck!</div>
       </div>
 
       <div>
@@ -24,8 +24,8 @@
         <label
           for="question3"
           class="question"
-        >Keep answers short. But in case of...If the question is long, the text wraps.</label>
-        <div class="answers">This is the answer!</div>
+        >How we can keep ourselves update?</label>
+        <div class="answers">Participating in meetups, following news in tech world via social medias like twitter... </div>
       </div>
     </div>
   </div>

@@ -5,9 +5,7 @@
 
       <div class="contact-wrapper">
         <!---------------- 
-
       CONTACT PAGE LEFT 
-    
         ----------------->
         <form class="form-horizontal" role="form" method="post" action="contact.php">
           <div class="form-group">
@@ -47,9 +45,7 @@
         </form>
 
         <!---------------- 
-
       CONTACT PAGE RIGHT 
-    
         ----------------->
         <div class="direct-contact-container">
           <ul class="contact-list">
