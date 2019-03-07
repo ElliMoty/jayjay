@@ -39,7 +39,7 @@
       <template slot-scope="{ mutate, loading, error }">
         <div>
           <form action>
-            <textarea class="comment-text" type="text" v-model="text"></textarea>
+            <textarea class="comment-text" type="text" v-model="text" placeholder="Comments:" name="comments"></textarea>
             
             <input class="name-input" type="text" v-model="username" placeholder="Your Name:">
           </form>
@@ -197,6 +197,14 @@ section {
 .comment-text {
   width: 60%;
   height: 100px;
+  background-color:  rgb(202, 199, 199);
+  color: rgba(7, 7, 7, 0.6);
+  box-shadow: 2px 2px 20px gray;
+}
+
+.comment-text:hover {
+  background-color:  rgb(240, 239, 239);
+  color: rgba(7, 7, 7, 0.6);
 }
 
 .username-link {
@@ -213,7 +221,7 @@ section {
   -moz-appearance: none;
   appearance: none;
   outline: 0;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(56, 56, 56, 0.7);
   background-color: rgb(199, 199, 199);
   width: 60%;
   border-radius: 3px;

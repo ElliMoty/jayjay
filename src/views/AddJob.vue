@@ -40,8 +40,8 @@ export default {
   data() {
     return {
       title: "",
-      url: "",
-      coName: ""
+      coName: "",
+      url: ""
     };
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="faq">
-    <div class="centerplease">FAQ accordion</div>
+    <div class="centerplease">FAQ</div>
     <br>
 
     <div class="content">
@@ -31,12 +31,7 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
-
 <style scoped>
-
 .content {
   width: 80%;
   padding: 0;
@@ -64,7 +59,7 @@ export default {};
 .answers {
   padding: 0px 15px;
   margin: 5px 0;
-width:100%!important;
+  width:100%!important;
   height: 0;
   overflow: hidden;
   z-index: -1;
