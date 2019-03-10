@@ -69,7 +69,7 @@ export default {
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  color: rgb(63, 62, 62);
+  color: #2b2a2a;
 }
 .addJob:active {
   transform: translateY(1px);
@@ -96,7 +96,7 @@ export default {
   background-color: rgb(228, 229, 230);
 }
 .add-job-click {
-  color: gray;
+  color: #353535;
 }
 .add-job-click:hover {
   color: white;
