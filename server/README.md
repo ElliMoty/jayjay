@@ -4,7 +4,6 @@
 
   + Node.js
   + Apollo Server
-  + express.js
 
 
 ## Install all dependencies:
