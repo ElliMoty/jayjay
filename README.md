@@ -1,4 +1,22 @@
+![JaJay Logo](https://github.com/ElliMoty/project03-jayjay/blob/master/client/src/assets/logo-nav.png)
+
+# Overview
+
+JayJay is a Junior Job Board App which focuses only on juniors tech roles to help grads and newbies find their first jobs easier and knowledgeably. My goal is besides updating recent job ads gathering proper information about different companies hiring juniors. In terms of their culture, interview process and professional behaviors by inviting alumni and other experienced developers who passed this way.
+
+You can find demo **[here](https://)**.
+Username: elli
+password: chicken
+ 
 # jayjay-client
+
+## Tech Used
+
+  + Vue.js
+  + Apollo client
+  + jQuery
+  + Bootstrap
+  + Heroku
 
 ## Project setup
 ```
@@ -15,15 +33,12 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
+## Future steps
 
-### Lints and fixes files
-```
-npm run lint
-```
+  + Adding slack channel to invite developers.
+  + Adding PostgreSQL.
+  + Adding Recommended Company page.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
+**Note** Thanks for your attention! Feedback welcome. :blush:
+  + [![twitter](https://github.com/ElliMoty/project03-jayjay/blob/master/client/src/assets/twitter_image.png)](https://twitter.com/ElliMotaghi)
