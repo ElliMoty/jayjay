@@ -156,5 +156,8 @@ const server = new ApolloServer({
 const app = express();
 server.applyMiddleware({app});
 app.use(express.static('../client/dist'));
+app.use('/jayjay/',express.static('../client/dist'));
+app.use('/jayjay/*',express.static('../client/dist'));
+app.use('/login/',express.static('../client/dist'));
 
 app.listen(process.env.PORT || 8080);
