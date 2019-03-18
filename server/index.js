@@ -1,4 +1,5 @@
-const { ApolloServer, gql } = require("apollo-server");
+const { ApolloServer, gql } = require("apollo-server-express");
+const express = require('express');
 
 const jobs = [
   {
@@ -152,6 +153,8 @@ const server = new ApolloServer({
   // }
 });
 
-server.listen().then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`);
-});
+const app = express();
+server.applyMiddleware({app});
+app.use(express.static('../client/dist'));
+
+app.listen(process.env.PORT || 8080);
