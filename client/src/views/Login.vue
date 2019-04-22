@@ -31,7 +31,7 @@
         </div>
         <!-- Login Form end here -->
       </div>
-      <!-- Bubble element start here (10 squares) -->
+      <!-- Bubble elements start here (10 squares) -->
       <ul class="bg-bubbles">
         <li></li>
         <li></li>
@@ -44,7 +44,7 @@
         <li></li>
         <li></li>
       </ul>
-      <!-- Bubble element start here -->
+      <!-- Bubble elements end here -->
     </div>
   </div>
 </template>
