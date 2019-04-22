@@ -4,20 +4,20 @@ const express = require('express');
 const jobs = [
   {
     id: "1",
-    title: "Junior WordPress Web Developer",
+    title: "Junior Web Developer",
     url:
-      "https://www.seek.com.au/job/38479837?searchrequesttoken=f5da1542-d55d-42d5-9765-14ec5dd796e6&type=standout",
+      "https://www.seek.com.au/job/38834722?searchrequesttoken=d66049bc-f758-4826-bed0-035eece99e77&type=standard",
     company: {
-      name: "Net Ninjas"
+      name: "RIB"
     }
   },
   {
     id: "2",
-    title: "Junior Software Developer",
+    title: "Graduate Software Engineer",
     url:
-      "https://www.seek.com.au/job/38435117?searchrequesttoken=f5da1542-d55d-42d5-9765-14ec5dd796e6&type=standout",
+      "https://www.seek.com.au/job/38849783?searchrequesttoken=d66049bc-f758-4826-bed0-035eece99e77&type=standard",
     company: {
-      name: "AusNet Services"
+      name: "Robert Walters"
     }
   }
 ];
