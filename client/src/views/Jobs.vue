@@ -1,7 +1,7 @@
 <template>
   <div class="job-list">
     <!-- button for finding job -->
-    <button class="btn" id="search-jobs" title="Search for a job on Codepen">Find a job</button>
+    <button class="btn" id="search-jobs" title="Search for a job">Find a job</button>
 
     <div class="jobs-graphql">
       <!-- Apollo watched Graphql query -->
@@ -13,7 +13,7 @@
           <!-- Error -->
           <div v-else-if="error" class="error apollo">An error occured</div>
 
-          <!-- Result -->
+          <!-- Data -->
           <div v-else-if="data" class="result apollo">
             <div class="container" id="job-loading">
               <p>Click the button above to get started</p>
@@ -61,5 +61,5 @@ export default {
 </script>
 
 <style scoped>
-@import "../styles/jobs.css";
+  @import "../styles/jobs.css";
 </style>
